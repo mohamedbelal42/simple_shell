@@ -152,26 +152,26 @@ char *_stringchar(char *, char);
 char **stringtow(char *, char *);
 char **stringtow2(char *, char);
 
-/* memory_functions */
-char *_memset(char *, char, unsigned int);
-void ffree(char **);
-void *_realloc(void *, unsigned int, unsigned int);
+/* memory_func1.c */
+char *_memoryset(char *, char, unsigned int);
+void _free(char **);
+void *_reallocation(void *, unsigned int, unsigned int);
 
 /* memory_functions2.c */
-int bfree(void **);
+int __free(void **);
 
 /* more_functions.c */
-int interactive(info_t *);
-int is_delim(char, char *);
-int _isalpha(int);
-int _atoi(char *);
+int inactive(info_t *);
+int is_del(char, char *);
+int _isalphabet(int);
+int _toi(char *);
 
 /* more_functions2.c */
-int _erratoi(char *);
-void print_error(info_t *, char *);
-int print_d(int, int);
-char *convert_number(long int, int, int);
-void remove_comments(char *);
+int _errtoi(char *);
+void error_print(info_t *, char *);
+int print_dec(int, int);
+char *number_convert(long int, int, int);
+void comments_remove(char *);
 
 /* builtin_emulators.c */
 int _myexit(info_t *);
