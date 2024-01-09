@@ -157,16 +157,16 @@ char *_memoryset(char *, char, unsigned int);
 void _free(char **);
 void *_reallocation(void *, unsigned int, unsigned int);
 
-/* memory_functions2.c */
+/* memory_func2.c */
 int __free(void **);
 
-/* more_functions.c */
+/* more_func1.c */
 int inactive(info_t *);
 int is_del(char, char *);
 int _isalphabet(int);
 int _toi(char *);
 
-/* more_functions2.c */
+/* more_func2.c */
 int _errtoi(char *);
 void error_print(info_t *, char *);
 int print_dec(int, int);
@@ -211,19 +211,19 @@ int read_history(info_t *info);
 int build_history_list(info_t *info, char *buf, int linecount);
 int renumber_history(info_t *info);
 
-/* liststr.c module */
-list_t *add_node(list_t **, const char *, int);
-list_t *add_node_end(list_t **, const char *, int);
-size_t print_list_str(const list_t *);
-int delete_node_at_index(list_t **, unsigned int);
-void free_list(list_t **);
+/* list_string1.c module */
+list_t *adds_node(list_t **, const char *, int);
+list_t *adds_node_end(list_t **, const char *, int);
+size_t print_list_string(const list_t *);
+int delete_node_index(list_t **, unsigned int);
+void list_free(list_t **);
 
-/* liststr2.c module */
-size_t list_len(const list_t *);
-char **list_to_strings(list_t *);
-size_t print_list(const list_t *);
-list_t *node_starts_with(list_t *, char *, char);
-ssize_t get_node_index(list_t *, list_t *);
+/* list_string2.c module */
+size_t list_length(const list_t *);
+char **list_strings(list_t *);
+size_t print__list(const list_t *);
+list_t *node_startswith(list_t *, char *, char);
+ssize_t get_node_ind(list_t *, list_t *);
 
 /* chain.c */
 int is_chain(info_t *, char *, size_t *);
