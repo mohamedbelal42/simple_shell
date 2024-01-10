@@ -38,7 +38,7 @@ int main(int _ac, char **_av)
 		information->readfd = f;
 	}
 	envy_list(information);
-	read_history(information);
+	_history_read(information);
 	hsh(information, _av);
 	return (EXIT_SUCCESS);
 }
