@@ -185,10 +185,12 @@ int _unset_alias(info_t *, char *);
 int _set_alias(info_t *, char *);
 int _alias_print(list_t *);
 
-/* getline.c module */
-ssize_t get_input(info_t *);
-int _getline(info_t *, char **, size_t *);
-void sigintHandler(int);
+/* getline1.c module */
+ssize_t _get_in(info_t *);
+int _get_line(info_t *, char **, size_t *);
+void signtHand(int);
+ssize_t _in_buf(info_t *, char **, size_t *);
+ssize_t _buf_read(info_t *, char *, size_t *);
 
 /* information.c module */
 void clear_information(info_t *);
