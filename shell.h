@@ -112,10 +112,10 @@ typedef struct builtin
 
 
 /* hsh.c */
-int hsh(info_t *, char **);
-int find_builtin(info_t *);
-void find_cmd(info_t *);
-void fork_cmd(info_t *);
+int _hsh(info_t *, char **);
+int _get_builtin(info_t *);
+void _get_cmd(info_t *);
+void _fork_cmd(info_t *);
 
 /* path.c */
 int _is_cmd(info_t *, char *);

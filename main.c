@@ -39,6 +39,6 @@ int main(int _ac, char **_av)
 	}
 	envy_list(information);
 	_history_read(information);
-	hsh(information, _av);
+	_hsh(information, _av);
 	return (EXIT_SUCCESS);
 }
