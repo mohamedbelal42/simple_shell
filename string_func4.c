@@ -30,7 +30,7 @@ char **string_tow(char *s, char *del)
 		while (is_delimeter(s[j], del))
 			j++;
 		l = 0;
-		while (!is_delimeter(s[j + l], del) && s[j + kl])
+		while (!is_delimeter(s[j + l], del) && s[j + l])
 			l++;
 		str[k] = malloc((l + 1) * sizeof(char));
 		if (!str[k])
