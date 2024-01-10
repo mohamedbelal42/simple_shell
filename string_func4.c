@@ -17,7 +17,7 @@ char **string_tow(char *s, char *del)
 	if (!del)
 		del = " ";
 	for (j = 0; s[j] != '\0'; j++)
-		if (!is_delim(s[j], del) && (is_delim(s[j + 1], del) || !s[j + 1]))
+		if (!is_delimeter(s[j], del) && (is_delimeter(s[j + 1], del) || !s[j + 1]))
 			num++;
 
 	if (num == 0)
@@ -27,10 +27,10 @@ char **string_tow(char *s, char *del)
 		return (NULL);
 	for (j = 0, k = 0; k < num; k++)
 	{
-		while (is_delim(s[j], del))
+		while (is_delimeter(s[j], del))
 			j++;
 		l = 0;
-		while (!is_delim(s[j + l], del) && s[j + kl])
+		while (!is_delimeter(s[j + l], del) && s[j + kl])
 			l++;
 		str[k] = malloc((l + 1) * sizeof(char));
 		if (!str[k])

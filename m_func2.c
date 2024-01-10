@@ -37,13 +37,13 @@ int _stoi(char *str)
  */
 void print_err(info_t *information, char *s)
 {
-	_eputs(information->fname);
-	_eputs(": ");
+	put_e(information->fname);
+	put_e(": ");
 	print_dec(information->line_count, STDERR_FILENO);
-	_eputs(": ");
-	_eputs(information->argv[0]);
-	_eputs(": ");
-	_eputs(s);
+	put_e(": ");
+	put_e(information->argv[0]);
+	put_e(": ");
+	put_e(s);
 }
 
 /**
@@ -60,7 +60,7 @@ int print_dec(int i, int f)
 	unsigned int a, n;
 
 	if (f == STDERR_FILENO)
-		_put_char = _eputchar;
+		_put_char = put_echar;
 	if (i < 0)
 	{
 		a = -i;
