@@ -37,7 +37,7 @@ int main(int _ac, char **_av)
 		}
 		information->readfd = f;
 	}
-	populate_env_list(information);
+	envy_list(information);
 	read_history(information);
 	hsh(information, _av);
 	return (EXIT_SUCCESS);

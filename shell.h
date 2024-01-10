@@ -192,17 +192,17 @@ void clear_information(info_t *);
 void set_information(info_t *, char **);
 void free_information(info_t *, int);
 
-/* env.c module */
-char *_getenv(info_t *, const char *);
-int _myenv(info_t *);
-int _mysetenv(info_t *);
-int _myunsetenv(info_t *);
-int populate_env_list(info_t *);
+/* environment.c module */
+char *_getenvy(info_t *, const char *);
+int _envy(info_t *);
+int _setenvy(info_t *);
+int _unsetenvy(info_t *);
+int envy_list(info_t *);
 
-/* env2.c module */
-char **get_environ(info_t *);
-int _unsetenv(info_t *, char *);
-int _setenv(info_t *, char *, char *);
+/* environment2.c module */
+char **get_env(info_t *);
+int _unset_env(info_t *, char *);
+int _set_env(info_t *, char *, char *);
 
 /* file_io_functions.c */
 char *get_history_file(info_t *info);
