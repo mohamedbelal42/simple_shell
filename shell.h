@@ -153,12 +153,12 @@ char **string_tow(char *, char *);
 char **string_tow2(char *, char);
 
 /* memory_func1.c */
-char *_memoryset(char *, char, unsigned int);
-void _free(char **);
-void *_reallocation(void *, unsigned int, unsigned int);
+char *memory_set(char *, char, unsigned int);
+void str_free(char **);
+void *real_loc(void *, unsigned int, unsigned int);
 
 /* memory_func2.c */
-int __free(void **);
+int _free(void **);
 
 /* more_func1.c */
 int inactive(info_t *);
