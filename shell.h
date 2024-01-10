@@ -38,20 +38,20 @@ extern char **environ;
 
 
 /**
- * struct liststr - singly linked list
- * @num: the number field
- * @str: a string
+ * struct liststring - singly linked list
+ * @n: the number field
+ * @s: a string
  * @next: points to the next node
  */
-typedef struct liststr
+typedef struct liststring
 {
-	int num;
-	char *str;
+	int n;
+	char *s;
 	struct liststr *next;
 } list_t;
 
 /**
- *struct passinfo - contains pseudo-arguements to pass into a function,
+ *struct passinformation - contains pseudo-arguements to pass into a function,
  *					allowing uniform prototype for function pointer struct
  *@arg: a string generated from getline containing arguements
  *@argv: an array of strings generated from arg
@@ -72,7 +72,7 @@ typedef struct liststr
  *@readfd: the fd from which to read line input
  *@histcount: the history line number count
  */
-typedef struct passinfo
+typedef struct passinformation
 {
 	char *arg;
 	char **argv;
@@ -132,25 +132,25 @@ int _putf(char c, int fd);
 int _putsf(char *str, int fd);
 
 /* string_func1.c */
-int _stringlength(char *);
-int _stringcompare(char *, char *);
+int string_length(char *);
+int string_compare(char *, char *);
 char *start_with(const char *, const char *);
-char *_stringcat(char *, char *);
+char *string_cat(char *, char *);
 
 /* string_func2.c */
-char *_stringcopy(char *, char *);
-char *_stringduplicate(const char *);
-void _put(char *);
-int _putchar(char);
+char *string_copy(char *, char *);
+char *string_dup(const char *);
+void put_str(char *);
+int put_char(char);
 
 /* string_func3.c */
-char *_stringncopy(char *, char *, int);
-char *_stringncat(char *, char *, int);
-char *_stringchar(char *, char);
+char *str_copy(char *, char *, int);
+char *str_cat(char *, char *, int);
+char *string_ch(char *, char);
 
 /* string_func4.c */
-char **stringtow(char *, char *);
-char **stringtow2(char *, char);
+char **string_tow(char *, char *);
+char **string_tow2(char *, char);
 
 /* memory_func1.c */
 char *_memoryset(char *, char, unsigned int);

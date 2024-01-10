@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * _stringlength - returns the length of a string
+ * string_length - returns the length of a string
  * @str: the string whose length to check
  *
  * Return: integer length of string
  */
-int _stringlength(char *str)
+int string_length(char *str)
 {
 	int j = 0;
 
@@ -19,13 +19,13 @@ int _stringlength(char *str)
 }
 
 /**
- * _stringcompare - performs lexicogarphic comparison of two strangs.
+ * string_compare - performs lexicogarphic comparison of two strangs.
  * @str1: the first strang
  * @str2: the second strang
  *
  * Return: negative if str1 < str2, positive if str1 > str2, 0 if str1 == str2
  */
-int _stringcompare(char *str1, char *str2)
+int string_compare(char *str1, char *str2)
 {
 	while (*str1 && *str2)
 	{
@@ -56,13 +56,13 @@ char *start_with(const char *h, const char *n)
 }
 
 /**
- * _stringcat - concatenates two strings
+ * string_cat - concatenates two strings
  * @destination: the destination buffer
  * @source: the source buffer
  *
  * Return: pointer to destination buffer
  */
-char *_stringcat(char *destination, char *source)
+char *string_cat(char *destination, char *source)
 {
 	char *r = destination;
 
