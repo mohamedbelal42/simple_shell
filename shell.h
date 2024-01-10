@@ -173,12 +173,12 @@ int print_dec(int, int);
 char *convert_num(long int, int, int);
 void comments_remove(char *);
 
-/* builtin_emulators.c */
-int _myexit(info_t *);
-int _mycd(info_t *);
-int _myhelp(info_t *);
+/* emulators1.c */
+int _exity(info_t *);
+int _cdy(info_t *);
+int _helpy(info_t *);
 
-/* builtin_emulators2.c */
+/* emulators2.c */
 int _myhistory(info_t *);
 int _myalias(info_t *);
 
