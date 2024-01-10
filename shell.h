@@ -187,10 +187,10 @@ ssize_t get_input(info_t *);
 int _getline(info_t *, char **, size_t *);
 void sigintHandler(int);
 
-/* info.c module */
-void clear_info(info_t *);
-void set_info(info_t *, char **);
-void free_info(info_t *, int);
+/* information.c module */
+void clear_information(info_t *);
+void set_information(info_t *, char **);
+void free_information(info_t *, int);
 
 /* env.c module */
 char *_getenv(info_t *, const char *);
