@@ -118,9 +118,9 @@ void find_cmd(info_t *);
 void fork_cmd(info_t *);
 
 /* path.c */
-int is_cmd(info_t *, char *);
-char *dup_chars(char *, int, int);
-char *find_path(info_t *, char *, char *);
+int _is_cmd(info_t *, char *);
+char *_dup_ch(char *, int, int);
+char *_get_path(info_t *, char *, char *);
 
 /* loophsh.c */
 int loophsh(char **);
@@ -179,8 +179,11 @@ int _cdy(info_t *);
 int _helpy(info_t *);
 
 /* emulators2.c */
-int _myhistory(info_t *);
-int _myalias(info_t *);
+int _historyy(info_t *);
+int _aliasy(info_t *);
+int _unset_alias(info_t *, char *);
+int _set_alias(info_t *, char *);
+int _alias_print(list_t *);
 
 /* getline.c module */
 ssize_t get_input(info_t *);
