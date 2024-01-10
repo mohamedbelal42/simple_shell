@@ -212,18 +212,18 @@ int build_history_list(info_t *info, char *buf, int linecount);
 int renumber_history(info_t *info);
 
 /* list_string1.c module */
-list_t *adds_node(list_t **, const char *, int);
-list_t *adds_node_end(list_t **, const char *, int);
-size_t print_list_string(const list_t *);
-int delete_node_index(list_t **, unsigned int);
+list_t *node_add(list_t **, const char *, int);
+list_t *end_add(list_t **, const char *, int);
+size_t print_strlist(const list_t *);
+int node_delete(list_t **, unsigned int);
 void list_free(list_t **);
 
 /* list_string2.c module */
 size_t list_length(const list_t *);
-char **list_strings(list_t *);
-size_t print__list(const list_t *);
-list_t *node_startswith(list_t *, char *, char);
-ssize_t get_node_ind(list_t *, list_t *);
+char **strings_of_list(list_t *);
+size_t list_print(const list_t *);
+list_t *node_start(list_t *, char *, char);
+ssize_t node_index(list_t *, list_t *);
 
 /* chain.c */
 int is_chain(info_t *, char *, size_t *);
