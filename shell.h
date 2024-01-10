@@ -160,17 +160,17 @@ void *real_loc(void *, unsigned int, unsigned int);
 /* memory_func2.c */
 int _free(void **);
 
-/* more_func1.c */
-int inactive(info_t *);
-int is_del(char, char *);
-int _isalphabet(int);
-int _toi(char *);
+/* m_func1.c */
+int _inactive(info_t *);
+int is_delimeter(char, char *);
+int is_alphabet(int);
+int strtoi(char *);
 
 /* more_func2.c */
-int _errtoi(char *);
-void error_print(info_t *, char *);
+int _stoi(char *);
+void print_err(info_t *, char *);
 int print_dec(int, int);
-char *number_convert(long int, int, int);
+char *convert_num(long int, int, int);
 void comments_remove(char *);
 
 /* builtin_emulators.c */
