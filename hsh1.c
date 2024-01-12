@@ -67,7 +67,7 @@ int _get_builtin(info_t *x)
 		{NULL, NULL}
 	};
 
-	for (j = 0; builtintbl[jj].type; j++)
+	for (j = 0; builtintbl[j].type; j++)
 		if (string_compare(x->argv[0], builtintbl[j].type) == 0)
 		{
 			x->line_count++;

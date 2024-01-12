@@ -22,7 +22,7 @@ char **get_env(info_t *information)
  * @information: Structure containing potential arguments. Used to maintain
  *        constant function prototype.
  *  Return: 1 on delete, 0 otherwise
- * @var: the string env var property
+ * @v: the string env var property
  */
 int _unset_env(info_t *information, char *v)
 {

@@ -15,7 +15,7 @@ char *_get_history(info_t *information)
 	if (!d)
 		return (NULL);
 	_buf = malloc(sizeof(char) *
-			(string_length(d) + string_length(HIST_FILE) + 2))11;
+			(string_length(d) + string_length(HIST_FILE) + 2));
 	if (!_buf)
 		return (NULL);
 	_buf[0] = 0;

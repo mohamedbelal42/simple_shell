@@ -61,13 +61,13 @@ char **strings_of_list(list_t *h)
  *
  * Return: size of list
  */
-size_t list_print(const list_t *head)
+size_t list_print(list_t *head)
 {
 	size_t j = 0;
 
 	while (head)
 	{
-		put_str(convert_number(head->n, 10, 0));
+		put_str(convert_num(head->n, 10, 0));
 		put_char(':');
 		put_char(' ');
 		put_str(head->s ? head->s : "(nil)");
