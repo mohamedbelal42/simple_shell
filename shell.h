@@ -161,7 +161,7 @@ void *real_loc(void *, unsigned int, unsigned int);
 int _free(void **);
 
 /* m_func1.c */
-int inactive(info_t *);
+int inter_active(info_t *);
 int is_delimeter(char, char *);
 int is_alphabet(int);
 int strtoi(char *);

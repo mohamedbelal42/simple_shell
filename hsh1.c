@@ -15,7 +15,7 @@ int _hsh(info_t *x, char **_av)
 	while (s != -1 && ret != -2)
 	{
 		clear_information(x);
-		if (interactive(x))
+		if (inter_active(x))
 			put_str("$ ");
 		put_echar(BUF_FLUSH);
 		s = _get_in(x);
@@ -26,13 +26,13 @@ int _hsh(info_t *x, char **_av)
 			if (ret == -1)
 				_get_cmd(x);
 		}
-		else if (_interactive(x))
+		else if (inter_active(x))
 			put_char('\n');
 		free_information(x, 0);
 	}
 	_history_write(x);
 	free_information(x, 1);
-	if (!_interactive(x) && x->status)
+	if (!inter_active(x) && x->status)
 		exit(x->status);
 	if (ret == -2)
 	{
@@ -108,7 +108,7 @@ void _get_cmd(info_t *x)
 	}
 	else
 	{
-		if ((_interactive(x) || _getenvy(x, "PATH=")
+		if ((inter_active(x) || _getenvy(x, "PATH=")
 			|| x->argv[0][0] == '/') && _is_cmd(x, x->argv[0]))
 			_fork_cmd(x);
 		else if (*(x->arg) != '\n')
