@@ -9,7 +9,7 @@
  */
 int _historyy(info_t *x)
 {
-	list_print(x->history);
+	print_list(x->history);
 	return (0);
 }
 
@@ -82,19 +82,19 @@ int _alias_print(list_t *node)
 
 /**
  * _aliasy - mimics the alias builtin (man alias)
- * @x: Structure containing potential arguments. Used to maintain
+ * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: Always 0
  */
-int _aliasy(info_t *x)
+int _aliasy(info_t *info)
 {
 	int j = 0;
 	char *ptr = NULL;
 	list_t *node = NULL;
 
-	if (x->argc == 1)
+	if (info->argc == 1)
 	{
-		node = x->alias;
+		node = info->alias;
 		while (node)
 		{
 			_alias_print(node);
@@ -102,13 +102,13 @@ int _aliasy(info_t *x)
 		}
 		return (0);
 	}
-	for (j = 1; x->argv[j]; j++)
+	for (j = 1; info->argv[j]; j++)
 	{
-		ptr = string_ch(x->argv[j], '=');
+		ptr = string_ch(info->argv[j], '=');
 		if (ptr)
-			_set_alias(x, x->argv[j]);
+			_set_alias(info, info->argv[j]);
 		else
-			_alias_print(node_start(x->alias, x->argv[j], '='));
+			_alias_print(node_start(info->alias, info->argv[j], '='));
 	}
 
 	return (0);
