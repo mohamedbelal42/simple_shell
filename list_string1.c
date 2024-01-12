@@ -18,11 +18,11 @@ list_t *node_add(list_t **h, const char *s, int n)
 	if (!new_h)
 		return (NULL);
 	memory_set((void *)new_h, 0, sizeof(list_t));
-	new_h->n = n;
+	new_h->num = n;
 	if (s)
 	{
-		new_h->s = string_dup(s);
-		if (!new_h->s)
+		new_h->str = string_dup(s);
+		if (!new_h->str)
 		{
 			free(new_h);
 			return (NULL);
@@ -53,11 +53,11 @@ list_t *end_add(list_t **h, const char *s, int n)
 	if (!new_node)
 		return (NULL);
 	memory_set((void *)new_node, 0, sizeof(list_t));
-	new_node->n = n;
+	new_node->num = n;
 	if (s)
 	{
-		new_node->s = string_dup(s);
-		if (!new_node->s)
+		new_node->str = string_dup(s);
+		if (!new_node->str)
 		{
 			free(new_node);
 			return (NULL);
@@ -86,7 +86,7 @@ size_t print_strlist(const list_t *head)
 
 	while (head)
 	{
-		put_str(head->s ? head->s : "(nil)");
+		put_str(head->str ? head->str : "(nil)");
 		put_str("\n");
 		head = head->next;
 		j++;
@@ -113,7 +113,7 @@ int node_delete(list_t **h, unsigned int i)
 	{
 		node = *h;
 		*h = (*h)->next;
-		free(node->s);
+		free(node->str);
 		free(node);
 		return (1);
 	}
@@ -123,7 +123,7 @@ int node_delete(list_t **h, unsigned int i)
 		if (j == i)
 		{
 			prev_node->next = node->next;
-			free(node->s);
+			free(node->str);
 			free(node);
 			return (1);
 		}
@@ -151,7 +151,7 @@ void list_free(list_t **p)
 	while (node)
 	{
 		next_node = node->next;
-		free(node->s);
+		free(node->str);
 		free(node);
 		node = next_node;
 	}

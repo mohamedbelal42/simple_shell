@@ -26,7 +26,7 @@ char *_getenvy(info_t *information, const char *n)
 
 	while (node)
 	{
-		ptr = start_with(node->s, n);
+		ptr = start_with(node->str, n);
 		if (ptr && *ptr)
 			return (ptr);
 		node = node->next;

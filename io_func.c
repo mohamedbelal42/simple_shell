@@ -46,7 +46,7 @@ int _history_write(info_t *information)
 		return (-1);
 	for (node = information->history; node; node = node->next)
 	{
-		puts_fd(node->s, fd);
+		puts_fd(node->str, fd);
 		put_fd('\n', fd);
 	}
 	put_fd(BUF_FLUSH, fd);
@@ -137,7 +137,7 @@ int _history_renumber(info_t *information)
 
 	while (node)
 	{
-		node->n = j++;
+		node->num = j++;
 		node = node->next;
 	}
 	return (information->histcount = j);
