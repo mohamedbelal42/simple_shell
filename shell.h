@@ -38,12 +38,12 @@ extern char **environ;
 
 
 /**
- * struct liststring - singly linked list
+ * struct liststr - singly linked list
  * @num: the number field
  * @str: a string
  * @next: points to the next node
  */
-typedef struct liststring
+typedef struct liststr
 {
 	int num;
 	char *str;
