@@ -87,7 +87,7 @@ int _alias_replace(info_t *x)
 		if (!node)
 			return (0);
 		free(x->argv[0]);
-		ptr = string_ch(node->s, '=');
+		ptr = string_ch(node->str, '=');
 		if (!ptr)
 			return (0);
 		ptr = string_dup(ptr + 1);
@@ -130,7 +130,7 @@ int _var_replace(info_t *x)
 		if (node)
 		{
 			_string_replace(&(x->argv[j]),
-				string_dup(string_ch(node->s, '=') + 1));
+				string_dup(string_ch(node->str, '=') + 1));
 			continue;
 		}
 		_string_replace(&x->argv[j], string_dup(""));
