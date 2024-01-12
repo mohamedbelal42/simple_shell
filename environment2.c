@@ -35,7 +35,7 @@ int _unset_env(info_t *information, char *v)
 
 	while (node)
 	{
-		ptr = start_with(node->s, v);
+		ptr = start_with(node->str, v);
 		if (ptr && *ptr == '=')
 		{
 			information->env_changed = node_delete(&(information->env), j);
@@ -76,11 +76,11 @@ int _set_env(info_t *information, char *v, char *val)
 	node = information->env;
 	while (node)
 	{
-		ptr = start_with(node->s, v);
+		ptr = start_with(node->str, v);
 		if (ptr && *ptr == '=')
 		{
-			free(node->s);
-			node->s = _buf;
+			free(node->str);
+			node->str = _buf;
 			information->env_changed = 1;
 			return (0);
 		}
