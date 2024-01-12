@@ -56,12 +56,12 @@ char **strings_of_list(list_t *h)
 
 
 /**
- * list_print - prints all elements of a list_t linked list
+ * print_list - prints all elements of a list_t linked list
  * @head: pointer to first node
  *
  * Return: size of list
  */
-size_t list_print(list_t *head)
+size_t print_list(list_t *head)
 {
 	size_t j = 0;
 

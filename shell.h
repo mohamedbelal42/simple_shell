@@ -161,12 +161,12 @@ void *real_loc(void *, unsigned int, unsigned int);
 int _free(void **);
 
 /* m_func1.c */
-int _inactive(info_t *);
+int inactive(info_t *);
 int is_delimeter(char, char *);
 int is_alphabet(int);
 int strtoi(char *);
 
-/* more_func2.c */
+/* m_func2.c */
 int _stoi(char *);
 void print_err(info_t *, char *);
 int print_dec(int, int);
@@ -226,7 +226,7 @@ void list_free(list_t **);
 /* list_string2.c module */
 size_t list_length(const list_t *);
 char **strings_of_list(list_t *);
-size_t list_print(const list_t *);
+size_t print_list(const list_t *);
 list_t *node_start(list_t *, char *, char);
 ssize_t node_index(list_t *, list_t *);
 
